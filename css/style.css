@@ -1,0 +1,129 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #000;
+    font-family: sans-serif;
+}
+.main{
+    width: 100%;
+    margin: 24% auto;
+    position: relative;
+}
+#slider{
+    -webkit-appearance:none;
+    width: 100%;
+    height: 7px;
+    outline: none;
+    border-radius: 3px
+}
+#slider::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+}
+#selector{
+    height: 104px;
+    width: 48px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.select-btn{
+    height: 30px;
+    width: 30px;
+    background-image: url(./slider.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+}
+#selectValue{
+    width: 30px;
+    height: 48px;
+    position: absolute;
+    top:0;
+    background: #ffd200;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#selectValue::after{
+    content:"";
+    border-top: 15px solid #ffd200;
+    border-left: 15px solid #000;
+    border-right: 15px solid #000;
+    position: absolute;
+    bottom: -14px;
+    left: 0
+} */
+
+
+*{
+    padding:0;
+    margin: 0
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: gray;
+}
+.main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+   
+}
+.slider{
+    appearance: none;
+    width: 90%;
+    margin: 20px;
+    border-radius: 7px;
+    height: 13px;
+   
+}
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    background: rgb(41, 36, 36);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: background ease .5s ;
+}
+
+.slider::-webkit-slider-thumb:hover{
+    background:rgb(27, 183, 245);
+    box-shadow: 0 0 0 5px #fff , 0 0 0 7px rgb(27, 183, 245)
+}
+.number{
+   background: rgb(27, 183, 245);
+   width:60px;
+   height: 30px;
+   margin: 5px;
+   color: black;
+   text-align: center;
+   line-height: 30px;
+   border-radius: 7px;
+   position: relative;
+}
+.number::after{
+    content:"";
+    position: absolute;
+    left:-6px;
+    top:9px;
+    background: rgb(27, 183, 245);
+    height: 12px;
+    width: 12px;
+    transform: rotate(45deg)
+}
