@@ -1,0 +1,249 @@
+/* 
+ *{
+     box-sizing: border-box;
+ }
+ html,body{
+     font-family: 'TerafikRegular';
+     font-size: 16px;
+ }
+ @media screen and (max-width: 768px){
+     html, body{
+         font-size: 12px
+     }
+ }
+ .container{
+    background-color: #FF9653;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+ }
+ .button{
+     text-decoration: none;
+     font-size: .875rem;
+    font-weight: 300;
+     display:inline-block;
+     border-radius: 1.5rem;
+     background-color: white;
+     color: #FF9653;
+     padding: 1rem 2rem
+ }
+ 
+ .popup-photo{
+     width: 40%;
+     height:100%;
+     display:flex;
+     justify-content: flex-end;
+     align-items: flex-end;
+     overflow: hidden;
+     
+ }
+ 
+ .popup-photo img{
+     width: auto;
+     height: 100%;
+ }
+ .popup-text{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     width: 60%;
+     height: 100%;
+     padding: 4rem
+ }
+
+ .popup-text h1{
+     font-size: 2rem;
+     font-weight: 600;
+     margin-bottom:2rem;
+     color: #FF9653;
+     direction: rtl;
+ }
+ .popup-text p{
+     font-size: .875rem;
+     color: #686868;
+     text-align: justify;
+     direction:rtl;
+     line-height: 1.5;
+ }
+ .popup-close{
+     position: absolute;
+     right: -1rem;
+     top: -1rem;
+     width: 3rem;
+     height: 3rem;
+     font-size: .875rem;
+     border-radius: 100%;
+     background-color: black;
+     z-index: 4;
+     color: #fff;
+     line-height: 3rem;
+     text-align: center;
+     cursor: pointer;
+     text-decoration: none
+    }
+    
+
+
+
+    .popup{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position:fixed;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.8);
+        z-index:2;
+       visibility:hidden; 
+        overflow: hidden;
+   
+    }
+    .popup-inner{
+        position:relative;
+        bottom:-100vw;
+        right: -100vh;
+        display: flex;
+        align-items: center;
+        max-width: 800px;
+        max-height: 600px;
+        width:60%;
+        height: 80%;
+        background-color: white;
+        transform: rotate(180deg);
+        transition: .5s ease
+    }
+
+
+
+    .popup:target{
+        visibility: visible;
+       opacity: 1;
+       color:red;
+    }
+     .popup:target .popup-inner{
+        bottom:0;
+        right: 0;
+        transform: rotate(0);
+        color:red;
+   
+    }  */
+
+
+
+
+
+*{
+    padding: 0;
+    margin:0;
+}
+body{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100vw;
+height: 100vh;
+background-color: orange;
+font-size: 16px;
+}
+@media (max-width:641px){
+  p{
+        font-size: 12px;
+      
+    }
+}
+@media (max-width:340px){
+  p{
+        font-size: 8px;
+      
+    }
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.btn{
+    padding: 15px 30px;
+    background-color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    color: orangered;
+    font-weight: bold;
+}
+.popup{
+    position: fixed;
+    width: 100wv;
+    height: 100vh;
+    background:rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    visibility: visible;
+
+}
+.inner-pop{
+    width: 60%;
+    height: 80%;
+    background-color: white;
+    direction: rtl;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transform: rotate(45deg);
+    transition: .2s linear;
+    bottom:0;
+    right: 0;
+}
+.text{
+    flex-basis: 60%;
+    height: 100%;
+    text-align: justify;
+    color: orangered;
+    font-family:'TerafikRegular';
+    font-size: 0.8rem;
+    line-height: 2;
+    padding: 40px;
+   
+}
+.text h1{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.img{
+    flex-basis: 40%;
+    height: 100%;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.close{
+    position: absolute;
+    top:-10px;
+    right: -10px;
+    background-color: black;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+.inner-pop:target .inner-pop{
+    bottom: 0;
+    right: 0;
+}
+.inner-pop:target .popup{
+    visibility: visible;
+}
