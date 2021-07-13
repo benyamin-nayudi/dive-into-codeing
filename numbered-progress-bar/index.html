@@ -12,20 +12,39 @@
 
 
     <div class="main">
-        <input type="range" class="slider" min="0" max="100" value="50" step="1" id="slider">
+        <input type="range" class="slider" min="0" max="500" value="250" step="10" >
+        <div >
+            <p class="number" id="number">0</p>
+        </div>
+    </div>
+    <div class="main">
+        <input type="range" class="slider" min="0" max="100" value="50" step="1" >
+        <div >
+            <p class="number" id="number">0</p>
+        </div>
+    </div>
+    <div class="main">
+        <input type="range" class="slider" min="0" max="10" value="5" step="1" >
         <div >
             <p class="number" id="number">0</p>
         </div>
     </div>
 
     <script>
-       const slider= document.getElementById("slider");
-       const number= document.getElementById("number");
-        number.innerHTML="50";
-       
-      slider.addEventListener('input' , function(){
-           number.innerHTML = this.value
-      })
+        const number= document.querySelectorAll(".number");
+      
+        const slider= document.querySelectorAll(".slider");
+        console.log(slider[1]);
+
+        for(let i=0 ; i<=slider.length ; i++){
+            number[i].innerHTML = slider[i].max/2 ;
+           
+            slider[i].addEventListener("input" , ()=>{
+                number[i].innerHTML = slider[i].value;
+            })
+        }
+
+        slider
 
     </script>
 </body>
