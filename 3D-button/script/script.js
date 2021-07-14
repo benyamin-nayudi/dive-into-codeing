@@ -12,7 +12,7 @@ function mouseUpdate(e){
     const xR = e.pageX - leftOfset;
     const yR = e.pageY - TopOfset;
     
-	var XAngle = (0.35- yR / offsetWidth) *40 ;
+	var XAngle =  (0.35- yR / offsetWidth) *40 ;
     var YAngle = -(0.35- xR / offsetWidth) * 40 ;
 
     setProp(XAngle +'deg' , '--x' , card)
