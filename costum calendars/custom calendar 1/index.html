@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <title>custom calendar 1</title>
 </head>
-<body class="body">
+<body class="light">
 
-    <div class="calendar">
+    <div class="calendar light-calendar">
         <div class="calendar-header">
             <span class="month-picker" id="month-picker">
                 February
@@ -20,7 +20,7 @@
                 </span>
                 <span id="year">2021</span>
                 <span class="year-change" id="next-year">
-                    <pre><</pre>
+                    <pre>></pre>
                 </span>
 
             </div>
@@ -28,16 +28,23 @@
 
         <siv class="calendar-body">
             <div class="calendar-week-day">
-                <span>Sun</span>
-                <span>Mon</span>
-                <span>Tue</span>
-                <span>Wed</span>
-                <span>Thu</span>
-                <span>Fri</span>
-                <span>Sat</span>
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
             </div>
+            
             <div class="calendar-days">
-                <div>1</div>
+                <div>
+                    1
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <div>2</div>
                 <div>3</div>
                 <div>4</div>
@@ -52,16 +59,16 @@
                 <div>6</div>
                 <div>7</div>
             </div>
+
             <div class="calendar-footer">
                 <div class="toggle">
                     <span>Dark-Mode</span>
                     <div class="dark-mode-switch">
-                        <div class="dark-mode-switch-ident">
-                            
-                        </div>
+                        <div class="dark-mode-switch-ident"></div>
                     </div>
                 </div>
             </div>
+            
             <div class="month-list"></div>
         </siv>
     </div>
