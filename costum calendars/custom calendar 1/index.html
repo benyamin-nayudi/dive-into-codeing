@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Calendar
+    </title>
     <link rel="stylesheet" href="style.css">
-    <title>custom calendar 1</title>
 </head>
+
 <body class="light">
 
-    <div class="calendar light-calendar">
+    <div class="calendar">
         <div class="calendar-header">
-            <span class="month-picker" id="month-picker">
-                February
-            </span>
+            <span class="month-picker" id="month-picker">February</span>
             <div class="year-picker">
                 <span class="year-change" id="prev-year">
                     <pre><</pre>
@@ -22,11 +23,9 @@
                 <span class="year-change" id="next-year">
                     <pre>></pre>
                 </span>
-
             </div>
         </div>
-
-        <siv class="calendar-body">
+        <div class="calendar-body">
             <div class="calendar-week-day">
                 <div>Sun</div>
                 <div>Mon</div>
@@ -36,44 +35,20 @@
                 <div>Fri</div>
                 <div>Sat</div>
             </div>
-            
-            <div class="calendar-days">
-                <div>
-                    1
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
-                <div>7</div>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
-                <div>7</div>
-            </div>
-
-            <div class="calendar-footer">
-                <div class="toggle">
-                    <span>Dark-Mode</span>
-                    <div class="dark-mode-switch">
-                        <div class="dark-mode-switch-ident"></div>
-                    </div>
+            <div class="calendar-days"></div>
+        </div>
+        <div class="calendar-footer">
+            <div class="toggle">
+                <span>Dark Mode</span>
+                <div class="dark-mode-switch">
+                    <div class="dark-mode-switch-ident"></div>
                 </div>
             </div>
-            
-            <div class="month-list"></div>
-        </siv>
+        </div>
+        <div class="month-list"></div>
     </div>
-
 
     <script src="script.js"></script>
 </body>
+
 </html>
