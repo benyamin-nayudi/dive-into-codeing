@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: none;
+    border: 0 !important;
+    background-image: none;
+    background-color: #5c6664;
+
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+.select{
+    width: 20em;
+    position: relative;
+    display: flex;
+    height: 3em;
+    line-height: 3;
+    background-color:#5c6664 ;
+    border-radius: 10px;
+}
+
+select{
+    flex: 1;
+    padding: 0 1em;
+    color: white;
+    cursor: pointer;
+
+}
+
+.select::after{
+    content: '\25bc';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0 ;
+    padding: 0 1em;
+    background-color: #2b2e2e;
+    color: white;
+    cursor: pointer;
+    pointer-events: none;
+    transition: all 1s;
+
+}
+.select:hover::after{
+    color: #7cecd6;
+}
