@@ -1,6 +1,5 @@
 const date = new Date();
 
-date.setMonth(10)
 
 const renderCalendar = ()=>{
 
@@ -92,7 +91,15 @@ document.querySelector('.prev').addEventListener('click', () => {
 })
 
 document.querySelector('.next').addEventListener('click', () => { 
-    date.setMonth(date.getMonth() + 1);
+    date.setMonth(date.getMonth() +1 );
     renderCalendar();
 })
+
+document.querySelector('.today-day').addEventListener('click', () => { 
+    console.log('hi')
+    date.setMonth(date.getMonth() );
+    renderCalendar(); 
+})
+
+
 

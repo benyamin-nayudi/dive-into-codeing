@@ -43,3 +43,7 @@ td:hover{
 .today{
     background-color: red;
 }
+
+.prev-date , .next-date{
+    color: red;
+}
