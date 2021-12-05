@@ -13,14 +13,12 @@ const renderCalendar = ()=>{
 
     // this statement gives us the last day of the previous month
     const prevLastDay = new Date(date.getFullYear() , date.getMonth(), 0).getDate();
-    console.log('prevLastDay' ,prevLastDay);
 
-    //this gives us the week-days number (zero base numbering)
-    const lastDayIndex = new Date(date.getFullYear() , date.getMonth() +1, 0).getDay();
-    console.log('lastDayIndex' , lastDayIndex)
+    //gives us the the first day of the next month inside the first week (zero base numbering)
+    const lastDayIndex = new Date(date.getFullYear() , date.getMonth() +2, 0).getDay();
 
+    //this will gives us the number of days for the next month to display in the table
     const nextDays = 7 - lastDayIndex -1;
-    console.log('nextDays' ,nextDays);
 
 
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -71,7 +69,6 @@ const renderCalendar = ()=>{
         }
         daysTr.push(arrayHolder)
     }
-    console.log(daysTr)
 
     daysTr.map(row => {
         let tr = document.createElement('tr');
@@ -83,8 +80,8 @@ const renderCalendar = ()=>{
 }
 
 
-
 renderCalendar();
+
 document.querySelector('.prev').addEventListener('click', () => {
     date.setMonth(date.getMonth() - 1);
     renderCalendar();
@@ -96,9 +93,8 @@ document.querySelector('.next').addEventListener('click', () => {
 })
 
 document.querySelector('.today-day').addEventListener('click', () => { 
-    console.log('hi')
-    date.setMonth(date.getMonth() );
-    renderCalendar(); 
+    date.setMonth(new Date().getMonth());
+    renderCalendar();    
 })
 
 
