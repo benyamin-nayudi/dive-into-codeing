@@ -213,14 +213,14 @@ document.querySelector('.prev-week').addEventListener('click', () => {
     counter--
     if(counter === -1 ){
         date.setMonth(date.getMonth() -1 );
-        counter = 0;
+        counter = 4;
     }
     renderCalendar();
 })
 
 document.querySelector('.next-week').addEventListener('click', () => { 
     counter++
-    if(counter === 4 ){
+    if(counter >= 4 ){
         date.setMonth(date.getMonth() +1 );
         counter = 0;
     }
