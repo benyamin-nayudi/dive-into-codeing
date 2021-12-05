@@ -30,15 +30,9 @@ const renderCalendar = ()=>{
     let daysTd = [];
     let daysTr = [];
 
-    for(let x = date.getDay() +5 ; x > 0 ; x-- ){
-
-        // console.log('prevLastDay - x + 1' , prevLastDay - x + 1)
-        // console.log('date.getDay() +5' , date.getDay() +5)
-
-
+    for(let x = date.getDay() ; x > 0 ; x-- ){
         daysTd.push(`<td class="prev-date">${prevLastDay - x + 1}</td>`)
     }
-    console.log( daysTd)
 
 
     for( let i = 1 ; i <= lastDay ; i++){
@@ -54,11 +48,23 @@ const renderCalendar = ()=>{
         daysTd.push(`<td class="next-date">${j}</td>`)
     }
 
-    for(let k = 0 ; k < daysTd.length ; k++){
-        console.log(k)
+    let j = 0
+    for(let k = 0 ; k < 7 ; k++){
+
+        let test = [];
+        for(let l = 0 ; l < 7 ; l++){
+            test.push(daysTd[j]);
+            j++
+        }
+        daysTr.push(test)
     }
 
+
+    console.log(daysTr)
+
+
 }
+
 
 renderCalendar();
 document.querySelector('.prev').addEventListener('click', () => {
