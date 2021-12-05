@@ -24,16 +24,29 @@ generateCalendar = (month, year) => {
     if (!year) year = currDate.getFullYear()
 
     let curr_month = `${month_names[month]}`
+    console.log(curr_month , month)
+
     month_picker.innerHTML = curr_month
     calendar_header_year.innerHTML = year
 
     // get first day of month
     
     let first_day = new Date(year, month, 1)
-
-    for (let i = 0; i <= days_of_month[month] + first_day.getDay() - 1; i++) {
+    console.log('first_day:' ,first_day)
+    console.log('days_of_month[month]:' , days_of_month[month] )
+    console.log('first_day.getDay():' , first_day.getDay() )
+    console.log('days_of_month[month] + first_day.getDay():' , days_of_month[month] + first_day.getDay())
+    console.log('days_of_month[month] + first_day.getDay() - 1:' , days_of_month[month] + first_day.getDay() -1)
+    
+    
+    for (let i = 0; i <= days_of_month[month] + first_day.getDay() -1; i++) {
         let day = document.createElement('div')
-        if (i >= first_day.getDay()) {
+
+        console.log('i:', i)
+        console.log('days_of_month[month] + first_day.getDay() - 1:' , days_of_month[month] + first_day.getDay() -1)
+
+        if (i >= first_day.getDay()) { //first_day.getDay(): 3
+            console.log(i >= first_day.getDay())
             day.classList.add('calendar-day-hover')
             day.innerHTML = i - first_day.getDay() + 1
             day.innerHTML += `<span></span>
@@ -72,7 +85,17 @@ let currDate = new Date()
 let curr_month = {value: currDate.getMonth()}
 let curr_year = {value: currDate.getFullYear()}
 
+console.log(curr_month , curr_year)
+
 generateCalendar(curr_month.value, curr_year.value)
+
+
+
+
+
+
+
+
 
 document.querySelector('#prev-year').onclick = () => {
     --curr_year.value
@@ -80,7 +103,7 @@ document.querySelector('#prev-year').onclick = () => {
 }
 
 document.querySelector('#next-year').onclick = () => {
-    ++curr_year.value
+    curr_year.value++
     generateCalendar(curr_month.value, curr_year.value)
 }
 
