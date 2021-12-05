@@ -21,5 +21,25 @@ body{
 }
 
 
+.calendar-table ,td{
+    border-collapse: collapse;
+}
 
+td{
+    border: 1px solid gray;
+    padding: 1rem 3rem 2rem 1rem;
+    transition: outline 50ms ease-in;
+    cursor: pointer;
+}
 
+.not-available{
+    color: gray
+}
+td:hover{
+    outline: 2px solid red;
+    outline-offset: -2px;   
+}
+
+.today{
+    background-color: red;
+}
