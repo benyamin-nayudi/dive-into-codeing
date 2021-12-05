@@ -92,13 +92,23 @@ html{
     justify-content: center;
     align-items: center;
     text-shadow: .3rem .5rem rgba(0,0,0,0.5);
+    transition: background-color .2s ease-in-out;
 }
 
+
+.days div:hover:not(.today){
+    background-color: #262626;
+    border: .2rem solid #777;
+    cursor: pointer;
+}
 .prev-date , 
 .next-day{
     opacity: .5
 }
 
+.today{
+    background-color: #167e56;
+}
 
 
 
